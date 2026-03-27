@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy — Alfred Tokenworth</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0e0e11;
+            --surface: #16161a;
+            --text: #e8e6e1;
+            --muted: #8a8a8e;
+            --accent: #c9a84c;
+            --accent-dim: rgba(201, 168, 76, 0.12);
+            --border: #2a2a2e;
+        }
+ 
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+ 
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            padding: 3rem 2rem;
+            position: relative;
+        }
+ 
+        body::before {
+            content: '';
+            position: fixed;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(ellipse at 30% 20%, rgba(201, 168, 76, 0.04) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 0;
+        }
+ 
+        .container {
+            max-width: 640px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+ 
+        .back {
+            display: inline-block;
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 0.875rem;
+            font-weight: 500;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            margin-bottom: 3rem;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.3s ease;
+        }
+ 
+        .back:hover { border-bottom-color: var(--accent); }
+ 
+        h1 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 2rem;
+            font-weight: 400;
+            margin-bottom: 0.25rem;
+        }
+ 
+        .tagline {
+            font-size: 1rem;
+            color: var(--muted);
+            margin-bottom: 0.25rem;
+        }
+ 
+        .effective {
+            font-size: 0.85rem;
+            color: var(--muted);
+            margin-bottom: 2.5rem;
+        }
+ 
+        h2 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.15rem;
+            font-weight: 400;
+            color: var(--accent);
+            margin-top: 2.5rem;
+            margin-bottom: 0.75rem;
+        }
+ 
+        p {
+            font-size: 0.92rem;
+            color: var(--muted);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+ 
+        ul {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 1rem;
+        }
+ 
+        ul li {
+            font-size: 0.92rem;
+            color: var(--muted);
+            line-height: 1.8;
+            padding-left: 1.25rem;
+            position: relative;
+            margin-bottom: 0.35rem;
+        }
+ 
+        ul li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.75em;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background: var(--accent);
+            opacity: 0.6;
+        }
+ 
+        ul li strong {
+            color: var(--text);
+            font-weight: 500;
+        }
+ 
+        a.inline-link {
+            color: var(--accent);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.3s ease;
+        }
+ 
+        a.inline-link:hover {
+            border-bottom-color: var(--accent);
+        }
+ 
+        .contact-block {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1.25rem 1.5rem;
+            margin-top: 0.5rem;
+        }
+ 
+        .contact-block p {
+            margin-bottom: 0.25rem;
+            font-size: 0.9rem;
+        }
+ 
+        .contact-block a {
+            color: var(--accent);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.3s ease;
+        }
+ 
+        .contact-block a:hover {
+            border-bottom-color: var(--accent);
+        }
+ 
+        footer {
+            text-align: center;
+            margin-top: 4rem;
+            font-size: 0.75rem;
+            color: var(--muted);
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back">&larr; Back</a>
+ 
+        <h1>Privacy Policy</h1>
+        <p class="tagline">SMS &amp; Messaging Services</p>
+        <p class="effective">Effective Date: March 21, 2026</p>
+ 
+        <h2>1. Introduction</h2>
+        <p>Cameron Griffiths ("we," "us," or "our") respects your privacy and is committed to protecting the personal information you provide when using our SMS messaging services. This Privacy Policy explains how we collect, use, and safeguard your information in connection with text messages sent to and from our toll-free or local phone number(s) powered by Twilio.</p>
+ 
+        <h2>2. Information We Collect</h2>
+        <p>When you interact with our SMS services, we may collect the following information:</p>
+        <ul>
+            <li>Mobile phone number</li>
+            <li>Content of text messages you send to us</li>
+            <li>Date, time, and metadata of messages</li>
+            <li>Opt-in and opt-out status and preferences</li>
+            <li>Device and carrier information (as provided by your mobile carrier)</li>
+        </ul>
+ 
+        <h2>3. How We Use Your Information</h2>
+        <p>We use the information collected through our SMS services for the following purposes:</p>
+        <ul>
+            <li>To send you the messages you have opted in to receive (e.g., account notifications, verification codes, appointment reminders, or customer service responses)</li>
+            <li>To verify your identity through one-time passwords (OTP) or two-factor authentication (2FA)</li>
+            <li>To respond to your inquiries or requests sent via text message</li>
+            <li>To maintain records of consent and opt-out requests as required by law</li>
+            <li>To monitor and improve the reliability and security of our messaging services</li>
+        </ul>
+ 
+        <h2>4. Information Sharing</h2>
+        <p>We do not sell, rent, or share your personal information with third parties for their marketing purposes. We may share your information only in the following circumstances:</p>
+        <ul>
+            <li><strong>Service Providers:</strong> We use Twilio as our messaging platform provider. Twilio processes your phone number and message data on our behalf to deliver SMS messages. Twilio's privacy policy is available at <a class="inline-link" href="https://www.twilio.com/legal/privacy" target="_blank">https://www.twilio.com/legal/privacy</a>.</li>
+            <li><strong>Legal Requirements:</strong> We may disclose your information if required by law, regulation, legal process, or government request.</li>
+            <li><strong>Business Transfers:</strong> In the event of a merger, acquisition, or sale of assets, your information may be transferred as part of that transaction.</li>
+        </ul>
+ 
+        <h2>5. Data Retention</h2>
+        <p>We retain your phone number and messaging records for as long as necessary to fulfill the purposes described in this policy, comply with legal obligations, and resolve disputes. Opt-out records are maintained indefinitely to ensure we honor your preferences. You may request deletion of your data by contacting us at <a class="inline-link" href="mailto:Cameronsrgriffiths@gmail.com">Cameronsrgriffiths@gmail.com</a>.</p>
+ 
+        <h2>6. Data Security</h2>
+        <p>We implement reasonable administrative, technical, and physical safeguards to protect your information against unauthorized access, alteration, disclosure, or destruction. All messages are transmitted through Twilio's secure infrastructure, which employs encryption in transit.</p>
+ 
+        <h2>7. Your Rights and Choices</h2>
+        <p>You have the following rights regarding our SMS services:</p>
+        <ul>
+            <li><strong>Opt-Out:</strong> You may opt out of receiving messages at any time by replying STOP to any message you receive from us. You will receive a confirmation message and no further messages will be sent.</li>
+            <li><strong>Help:</strong> You may reply HELP to any message to receive information about our messaging program and how to contact us.</li>
+            <li><strong>Access and Deletion:</strong> You may contact us to request access to or deletion of the personal information we hold about you.</li>
+        </ul>
+ 
+        <h2>8. Children's Privacy</h2>
+        <p>Our SMS services are not directed to individuals under the age of 13. We do not knowingly collect personal information from children under 13. If we become aware that we have collected information from a child under 13, we will take steps to delete that information.</p>
+ 
+        <h2>9. Changes to This Policy</h2>
+        <p>We may update this Privacy Policy from time to time. If we make material changes, we will notify you by sending a text message to your registered number or by posting the updated policy on our website. Your continued use of our SMS services after any changes constitutes your acceptance of the updated policy.</p>
+ 
+        <h2>10. Contact Us</h2>
+        <p>If you have questions about this Privacy Policy or our SMS messaging practices, please contact us at:</p>
+        <div class="contact-block">
+            <p><strong style="color: var(--text);">Cameron Griffiths</strong></p>
+            <p>550 Oxford Drive, Richmond Hill, GA 31324, USA</p>
+            <p><a href="mailto:Cameronsrgriffiths@gmail.com">Cameronsrgriffiths@gmail.com</a></p>
+            <p><a href="tel:13053307150">1-305-330-7150</a></p>
+        </div>
+    </div>
+    <footer>&copy; 2026 Alfred Tokenworth</footer>
+</body>
+</html>
+ 
