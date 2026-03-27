@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms &amp; Conditions — Alfred Tokenworth</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0e0e11;
+            --surface: #16161a;
+            --text: #e8e6e1;
+            --muted: #8a8a8e;
+            --accent: #c9a84c;
+            --accent-dim: rgba(201, 168, 76, 0.12);
+            --border: #2a2a2e;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            padding: 3rem 2rem;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(ellipse at 30% 20%, rgba(201, 168, 76, 0.04) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .container {
+            max-width: 640px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .back {
+            display: inline-block;
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 0.875rem;
+            font-weight: 500;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            margin-bottom: 3rem;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.3s ease;
+        }
+
+        .back:hover { border-bottom-color: var(--accent); }
+
+        h1 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 2rem;
+            font-weight: 400;
+            margin-bottom: 0.25rem;
+        }
+
+        .tagline {
+            font-size: 1rem;
+            color: var(--muted);
+            margin-bottom: 0.25rem;
+        }
+
+        .effective {
+            font-size: 0.85rem;
+            color: var(--muted);
+            margin-bottom: 2.5rem;
+        }
+
+        h2 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.15rem;
+            font-weight: 400;
+            color: var(--accent);
+            margin-top: 2.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        p {
+            font-size: 0.92rem;
+            color: var(--muted);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 1rem;
+        }
+
+        ul li {
+            font-size: 0.92rem;
+            color: var(--muted);
+            line-height: 1.8;
+            padding-left: 1.25rem;
+            position: relative;
+            margin-bottom: 0.35rem;
+        }
+
+        ul li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.75em;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background: var(--accent);
+            opacity: 0.6;
+        }
+
+        ol {
+            padding-left: 1.25rem;
+            margin-bottom: 1rem;
+        }
+
+        ol li {
+            font-size: 0.92rem;
+            color: var(--muted);
+            line-height: 1.8;
+            margin-bottom: 0.35rem;
+            padding-left: 0.25rem;
+        }
+
+        .contact-block {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1.25rem 1.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .contact-block p {
+            margin-bottom: 0.25rem;
+            font-size: 0.9rem;
+        }
+
+        .contact-block a {
+            color: var(--accent);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.3s ease;
+        }
+
+        .contact-block a:hover {
+            border-bottom-color: var(--accent);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 4rem;
+            font-size: 0.75rem;
+            color: var(--muted);
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back">&larr; Back</a>
+
+        <h1>Terms &amp; Conditions</h1>
+        <p class="tagline">SMS &amp; Messaging Services</p>
+        <p class="effective">Effective Date: March 21, 2026</p>
+
+        <h2>1. Agreement to Terms</h2>
+        <p>By opting in to receive SMS messages from Cameron Griffiths ("we," "us," or "our"), you agree to these Terms &amp; Conditions and our <a href="privacy.html" style="color: var(--accent);">Privacy Policy</a>. If you do not agree, do not opt in to our messaging services.</p>
+
+        <h2>2. Description of Service</h2>
+        <p>We provide SMS-based messaging services which may include, but are not limited to:</p>
+        <ul>
+            <li>Account notifications and alerts</li>
+            <li>One-time passwords (OTP) and two-factor authentication (2FA) codes</li>
+            <li>Appointment reminders</li>
+            <li>Customer service communications</li>
+            <li>Informational updates related to your account or our services</li>
+        </ul>
+
+        <h2>3. Opt-In and Consent</h2>
+        <p>By providing your mobile phone number and expressly consenting to receive text messages from us, you confirm that:</p>
+        <ol>
+            <li>You are the owner or authorized user of the mobile device and phone number provided.</li>
+            <li>You consent to receive SMS messages from us at the phone number you have provided.</li>
+            <li>You understand that message and data rates may apply as determined by your mobile carrier.</li>
+            <li>Your consent is not a condition of any purchase or service.</li>
+        </ol>
+
+        <h2>4. Opt-Out</h2>
+        <p>You may opt out of receiving SMS messages at any time by replying STOP to any message sent from our number. Upon receipt of your STOP request, we will send a single confirmation message confirming that you have been unsubscribed. No additional messages will be sent unless you re-opt-in.</p>
+
+        <h2>5. Help</h2>
+        <p>For assistance with our messaging services, reply HELP to any message you receive from us. You may also contact us directly at <a href="mailto:Cameronsrgriffiths@gmail.com" style="color: var(--accent);">Cameronsrgriffiths@gmail.com</a> or <a href="tel:13053307150" style="color: var(--accent);">1-305-330-7150</a>.</p>
+
+        <h2>6. Message Frequency</h2>
+        <p>Message frequency varies depending on the nature of the service. For verification and authentication messages, you will receive messages only when you initiate a login or verification request. For notifications and alerts, frequency will depend on account activity. We will not send unsolicited marketing messages unless you have separately opted in to receive them.</p>
+
+        <h2>7. Message and Data Rates</h2>
+        <p>Standard message and data rates may apply to any messages sent to or received from us, as determined by your wireless carrier. You are responsible for any charges incurred. Contact your carrier for details about your messaging plan.</p>
+
+        <h2>8. Supported Carriers</h2>
+        <p>Our SMS services are available on all major U.S. wireless carriers including AT&amp;T, Verizon, T-Mobile, Sprint, and others. Carrier coverage and availability may vary. We are not responsible for delayed or undelivered messages caused by carrier issues.</p>
+
+        <h2>9. Disclaimer of Warranties</h2>
+        <p>Our SMS services are provided on an "as is" and "as available" basis. We make no warranties, express or implied, regarding the reliability, timeliness, accuracy, or completeness of our messaging services. We do not guarantee that messages will be delivered to your device or that messages will be delivered without delay.</p>
+
+        <h2>10. Limitation of Liability</h2>
+        <p>To the fullest extent permitted by applicable law, Cameron Griffiths shall not be liable for any direct, indirect, incidental, special, consequential, or punitive damages arising out of or relating to your use of or inability to use our SMS services, including but not limited to damages resulting from delayed, undelivered, or misdirected messages.</p>
+
+        <h2>11. Modifications</h2>
+        <p>We reserve the right to modify these Terms &amp; Conditions at any time. If we make material changes, we will provide notice via SMS or by updating these terms on our website. Your continued use of our messaging services following any changes constitutes acceptance of the modified terms.</p>
+
+        <h2>12. Governing Law</h2>
+        <p>These Terms &amp; Conditions shall be governed by and construed in accordance with the laws of the State of Georgia, without regard to its conflict of law provisions.</p>
+
+        <h2>13. Contact Information</h2>
+        <p>If you have any questions about these Terms &amp; Conditions, please contact us at:</p>
+        <div class="contact-block">
+            <p><strong style="color: var(--text);">Cameron Griffiths</strong></p>
+            <p>550 Oxford Drive, Richmond Hill, GA 31324, USA</p>
+            <p><a href="mailto:Cameronsrgriffiths@gmail.com">Cameronsrgriffiths@gmail.com</a></p>
+            <p><a href="tel:13053307150">1-305-330-7150</a></p>
+        </div>
+    </div>
+    <footer>&copy; 2026 Alfred Tokenworth</footer>
+</body>
+</html>
