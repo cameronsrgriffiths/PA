@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stay Connected — Cameron Griffiths</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --navy: #0c1b2e;
+    --navy-mid: #132d4a;
+    --gold: #c9a84c;
+    --gold-light: #e2c96a;
+    --sand: #f5f0e6;
+    --sand-dark: #e8dfd0;
+    --white: #ffffff;
+    --text: #2a2a2a;
+    --text-light: #6b6b6b;
+    --radius: 10px;
+  }
+
+  html { font-size: 16px; }
+
+  body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--navy);
+    background-image:
+      radial-gradient(ellipse 80% 60% at 20% 80%, rgba(201,168,76,0.08) 0%, transparent 60%),
+      radial-gradient(ellipse 60% 50% at 80% 20%, rgba(201,168,76,0.06) 0%, transparent 50%);
+    padding: 2rem 1rem;
+    color: var(--text);
+  }
+
+  .card {
+    background: var(--white);
+    width: 100%;
+    max-width: 480px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow:
+      0 4px 24px rgba(0,0,0,0.15),
+      0 1px 3px rgba(0,0,0,0.08);
+    animation: cardIn 0.6s ease-out both;
+  }
+
+  @keyframes cardIn {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .card-header {
+    background: var(--navy);
+    background-image: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
+    padding: 2.25rem 2rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .card-header::before {
+    content: '';
+    position: absolute;
+    top: -40%;
+    left: -20%;
+    width: 140%;
+    height: 140%;
+    background: radial-gradient(circle at 70% 30%, rgba(201,168,76,0.1) 0%, transparent 50%);
+    pointer-events: none;
+  }
+
+  .card-header h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.65rem;
+    color: var(--white);
+    letter-spacing: 0.01em;
+    line-height: 1.3;
+    position: relative;
+  }
+
+  .card-header .accent-line {
+    display: block;
+    width: 48px;
+    height: 3px;
+    background: var(--gold);
+    border-radius: 2px;
+    margin: 1rem auto 0;
+  }
+
+  .card-header p {
+    color: rgba(255,255,255,0.6);
+    font-size: 0.875rem;
+    margin-top: 0.75rem;
+    line-height: 1.5;
+    position: relative;
+  }
+
+  .card-body {
+    padding: 2rem;
+  }
+
+  .field {
+    margin-bottom: 1.25rem;
+  }
+
+  .field label {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--text-light);
+    margin-bottom: 0.4rem;
+  }
+
+  .field input[type="text"],
+  .field input[type="email"],
+  .field input[type="tel"] {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.95rem;
+    border: 1.5px solid var(--sand-dark);
+    border-radius: var(--radius);
+    background: var(--sand);
+    color: var(--text);
+    transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+    outline: none;
+  }
+
+  .field input:focus {
+    border-color: var(--gold);
+    box-shadow: 0 0 0 3px rgba(201,168,76,0.15);
+    background: var(--white);
+  }
+
+  .field input::placeholder {
+    color: #b0a99a;
+  }
+
+  /* Consent checkbox */
+  .consent {
+    display: flex;
+    gap: 0.75rem;
+    align-items: flex-start;
+    margin: 1.5rem 0 1.75rem;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .consent input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 22px;
+    height: 22px;
+    min-width: 22px;
+    border: 2px solid var(--sand-dark);
+    border-radius: 5px;
+    background: var(--sand);
+    cursor: pointer;
+    transition: all 0.2s;
+    position: relative;
+    margin-top: 1px;
+  }
+
+  .consent input[type="checkbox"]:checked {
+    background: var(--gold);
+    border-color: var(--gold);
+  }
+
+  .consent input[type="checkbox"]:checked::after {
+    content: '';
+    position: absolute;
+    left: 6px;
+    top: 2px;
+    width: 6px;
+    height: 11px;
+    border: solid var(--white);
+    border-width: 0 2.5px 2.5px 0;
+    transform: rotate(45deg);
+  }
+
+  .consent input[type="checkbox"]:focus {
+    box-shadow: 0 0 0 3px rgba(201,168,76,0.2);
+  }
+
+  .consent span {
+    font-size: 0.835rem;
+    line-height: 1.5;
+    color: var(--text-light);
+  }
+
+  .consent span strong {
+    color: var(--text);
+    font-weight: 600;
+  }
+
+  /* Submit */
+  .submit-btn {
+    display: block;
+    width: 100%;
+    padding: 0.85rem;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    color: var(--navy);
+    background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 100%);
+    border: none;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: transform 0.15s, box-shadow 0.2s, opacity 0.2s;
+    box-shadow: 0 2px 8px rgba(201,168,76,0.3);
+  }
+
+  .submit-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 16px rgba(201,168,76,0.4);
+  }
+
+  .submit-btn:active {
+    transform: translateY(0);
+  }
+
+  .submit-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+  }
+
+  /* Success state */
+  .success-msg {
+    display: none;
+    text-align: center;
+    padding: 2rem;
+    animation: fadeUp 0.4s ease-out both;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .success-msg .check-circle {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--gold-light), var(--gold));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+  }
+
+  .success-msg .check-circle svg {
+    width: 28px;
+    height: 28px;
+    stroke: var(--navy);
+    stroke-width: 3;
+    fill: none;
+  }
+
+  .success-msg h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.35rem;
+    color: var(--text);
+    margin-bottom: 0.5rem;
+  }
+
+  .success-msg p {
+    font-size: 0.875rem;
+    color: var(--text-light);
+    line-height: 1.5;
+  }
+
+  /* Error */
+  .field.error input {
+    border-color: #d9534f;
+    box-shadow: 0 0 0 3px rgba(217,83,79,0.12);
+  }
+
+  .error-text {
+    color: #d9534f;
+    font-size: 0.75rem;
+    margin-top: 0.3rem;
+    display: none;
+  }
+
+  .field.error .error-text { display: block; }
+  .consent.error .error-text { display: block; }
+
+  .consent.error input[type="checkbox"] {
+    border-color: #d9534f;
+  }
+</style>
+</head>
+<body>
+
+<div class="card">
+  <div class="card-header">
+    <h1>Stay Connected</h1>
+    <span class="accent-line"></span>
+    <p>Sign up to receive updates from Cameron Griffiths.</p>
+  </div>
+
+  <div class="card-body">
+    <form id="optinForm" novalidate>
+      <div class="field" id="nameField">
+        <label for="fullName">Full Name</label>
+        <input type="text" id="fullName" name="fullName" placeholder="Jane Doe" required>
+        <div class="error-text">Please enter your full name.</div>
+      </div>
+
+      <div class="field" id="emailField">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="jane@example.com" required>
+        <div class="error-text">Please enter a valid email address.</div>
+      </div>
+
+      <div class="field" id="phoneField">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="+1 (555) 123-4567" required>
+        <div class="error-text">Please enter a valid phone number.</div>
+      </div>
+
+      <label class="consent" id="consentField">
+        <input type="checkbox" id="consentBox" required>
+        <span>By checking this box, I understand that I am agreeing to receive messages from <strong>Cameron Griffiths</strong>.</span>
+      </label>
+      <div class="error-text" style="margin-top:-1rem;margin-bottom:1rem;" id="consentError">You must agree before submitting.</div>
+
+      <button type="submit" class="submit-btn" id="submitBtn">Submit</button>
+    </form>
+
+    <div class="success-msg" id="successMsg">
+      <div class="check-circle">
+        <svg viewBox="0 0 24 24"><polyline points="6 12 10 16 18 8"></polyline></svg>
+      </div>
+      <h2>You're All Set</h2>
+      <p>Thank you for signing up. You'll hear from Cameron soon.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+(function() {
+  const form = document.getElementById('optinForm');
+  const nameField = document.getElementById('nameField');
+  const emailField = document.getElementById('emailField');
+  const phoneField = document.getElementById('phoneField');
+  const consentField = document.getElementById('consentField');
+  const consentError = document.getElementById('consentError');
+  const successMsg = document.getElementById('successMsg');
+  const submitBtn = document.getElementById('submitBtn');
+
+  const nameInput = document.getElementById('fullName');
+  const emailInput = document.getElementById('email');
+  const phoneInput = document.getElementById('phone');
+  const consentBox = document.getElementById('consentBox');
+
+  // Clear errors on input
+  [nameInput, emailInput, phoneInput].forEach(el => {
+    el.addEventListener('input', () => el.closest('.field').classList.remove('error'));
+  });
+  consentBox.addEventListener('change', () => {
+    consentField.classList.remove('error');
+    consentError.style.display = 'none';
+  });
+
+  function validate() {
+    let valid = true;
+
+    if (!nameInput.value.trim()) {
+      nameField.classList.add('error'); valid = false;
+    } else { nameField.classList.remove('error'); }
+
+    const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRe.test(emailInput.value.trim())) {
+      emailField.classList.add('error'); valid = false;
+    } else { emailField.classList.remove('error'); }
+
+    const phoneRe = /[\d]{7,}/;
+    const phoneDigits = phoneInput.value.replace(/\D/g, '');
+    if (!phoneRe.test(phoneDigits)) {
+      phoneField.classList.add('error'); valid = false;
+    } else { phoneField.classList.remove('error'); }
+
+    if (!consentBox.checked) {
+      consentField.classList.add('error');
+      consentError.style.display = 'block';
+      valid = false;
+    } else {
+      consentField.classList.remove('error');
+      consentError.style.display = 'none';
+    }
+
+    return valid;
+  }
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    if (!validate()) return;
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending…';
+
+    const name = nameInput.value.trim();
+    const email = emailInput.value.trim();
+    const phone = phoneInput.value.trim();
+
+    const subject = encodeURIComponent('New Opt-In Submission');
+    const body = encodeURIComponent(
+      `New opt-in received:\n\n` +
+      `Name: ${name}\n` +
+      `Email: ${email}\n` +
+      `Phone: ${phone}\n\n` +
+      `This person has agreed to receive messages from Cameron Griffiths.`
+    );
+
+    const mailto = `mailto:alfredtokenworth@gmail.com?subject=${subject}&body=${body}`;
+
+    // Open mailto link
+    window.location.href = mailto;
+
+    // Show success after a short delay
+    setTimeout(() => {
+      form.style.display = 'none';
+      successMsg.style.display = 'block';
+    }, 600);
+  });
+})();
+</script>
+
+</body>
+</html>
